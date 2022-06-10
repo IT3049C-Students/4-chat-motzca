@@ -1,6 +1,7 @@
 const nameInput = document.getElementById("my-name-input");
 const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
+const enterButton = document.getElementById("enter-button");
 const chatBox = document.getElementById("chat");
 
 const MILLISECONDS_IN_TEN_SECONDS = 10000;
