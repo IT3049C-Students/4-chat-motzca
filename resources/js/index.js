@@ -6,6 +6,10 @@ const chatBox = document.getElementById("chat");
 const MILLISECONDS_IN_TEN_SECONDS = 10000;
 setInterval(updateMessages, MILLISECONDS_IN_TEN_SECONDS);
 
+const nameStorage = localStorage.setItem('name', 'my-name-input');
+let userName = localStorage.getItem('name');
+
+
 function updateMessagesInChatBox(){
   const serverURL = `https://it3049c-chat-application.herokuapp.com/messages`;
 
