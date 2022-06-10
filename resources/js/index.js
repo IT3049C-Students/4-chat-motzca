@@ -84,4 +84,15 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
   sendMessages(sender,message);
   myMessage.value="";
 });
+
+enterButton.addEventListener("click", function(enterButtonClickEvent) {
+
+  const sender = nameInput.value;
+  localStorage.setItem('name', sender);
+
+  const message = myMessage.value;
+
+  sendMessages(sender,message);
+  myMessage.value="";
+});
 }
