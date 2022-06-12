@@ -1,6 +1,7 @@
 const nameInput = document.getElementById("my-name-input");
 const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
+const enterButton = document.getElementById("enter-button");
 const chatBox = document.getElementById("chat");
 
 const MILLISECONDS_IN_TEN_SECONDS = 10000;
@@ -80,4 +81,14 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
   sendMessages(sender,message);
   myMessage.value="";
 });
+enterButton.addEventListener("click", function(enterButtonClickEvent) {
+  const sender = nameInput.value;
+  const message = myMessage.value;
+
+  localStorage.setItem('name', sender);
+  
+  sendMessages(sender,message);
+  myMessage.value="";
+});
+
 }
